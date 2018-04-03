@@ -138,3 +138,27 @@ Você pode obter ajuda dos desenvolvedores do vraptor na lista de discussão
 
 http://groups.google.com/group/caelum-vraptor
 
+# Meu Fork
+
+Caso deseje usar com seu maven, alterar a linha 86 do pom.xml deste projeto para seu repositorio
+
+`<repositoryName>vraptor-datatables</repositoryName> `
+
+`mvn clean deploy`
+
+E no pom do projeto que queira usar use o repositorio
+
+<repository>
+    <id>vraptor-datatables-mvn-repo</id>
+    <url>https://raw.github.com/SEU_ID_GIT_HUB/vraptor-datatables/mvn-repo/</url>
+    <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+    </snapshots>
+</repository>
+
+<dependency>
+	<groupId>br.com.fredericci</groupId>
+  	<artifactId>vraptor-datatables</artifactId>
+    <version>1.1-SNAPSHOT</version>
+</dependency>
